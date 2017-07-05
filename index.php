@@ -9,7 +9,7 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" />
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.css" />
-		<link rel="stylesheet" href="http://cdn.olof.ru/dump/doloto/assets/css/style.css">
+		<link rel="stylesheet" href="http://cdn.olof.ru/dump/doloto2/assets/css/style.css">
 	</head>
 	<body>
 		<header>
@@ -19,7 +19,7 @@
 						<div class="col-md-12">
 							<div class="float-left header-logo-flex__container">
 								<div class="header-logo__container">
-									<img class="" src="http://cdn.olof.ru/dump/doloto/assets/images/logo.png" alt="">
+									<img class="" src="http://cdn.olof.ru/dump/doloto2/assets/images/logo.png" alt="">
 								</div>
 							</div>
 							<div class="float-right">
@@ -44,7 +44,7 @@
 		<div class="jumbotron__container">
 			<div class="container">
 				<div class="jumbotron__title">
-					ДОЛОТА ДЛЯ БУРЕНИЯ СКВАЖИН
+					ЛОПАСТНЫЕ ДОЛОТА ДЛЯ БУРЕНИЯ СКВАЖИН
 				</div>
 				<div class="row" style="    padding: 3rem 0;">
 					<div class="col-lg-8">
@@ -127,7 +127,7 @@
 		</div>
 
 
-		<?php 
+		<?php
 		error_reporting(E_ERROR);
 		$output = [];
 
@@ -171,9 +171,9 @@
 			}
 
 			while (count($item['value']) <= 5) {
-				$item['value'] = array_merge($item['value'], $item['value']); 
+				$item['value'] = array_merge($item['value'], $item['value']);
 			}
-			
+
 			return $item;
 		}, $output);
 
@@ -445,6 +445,6 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
-		<script src="http://cdn.olof.ru/dump/doloto/assets/js/main.js" charset="utf-8"></script>
+		<script src="http://cdn.olof.ru/dump/doloto2/assets/js/main.js" charset="utf-8"></script>
 	</body>
 </html>

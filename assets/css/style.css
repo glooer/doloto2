@@ -86,6 +86,8 @@ a.invisible-link:visited {
 
 .jumbotron__container {
 	background-image: url(../images/jumbotron_background.png);
+	background-size: cover;
+	background-position: center;
 }
 
 .jumbotron__title {
