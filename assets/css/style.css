@@ -137,7 +137,7 @@ a.invisible-link:visited {
 }
 
 .content-product__item-image {
-	border-radius: 50%;
+	/*border-radius: 50%;*/
 	height: 200px;
 	width: 200px;
 	background: white;
@@ -149,7 +149,7 @@ a.invisible-link:visited {
 	position: relative;
 	border: 2px solid red;
 	color: red;
-	padding: 2rem;
+	/*padding: 2rem;*/
 }
 
 .content-product__item-image:before {
@@ -157,7 +157,7 @@ a.invisible-link:visited {
   border: 2px solid;
   width: calc(100% - 1rem);
   height: calc(100% - 1rem);
-  border-radius: 50%;
+  /*border-radius: 50%;*/
   position: absolute;
   top: 0.5rem;
   left: 0.5rem;
