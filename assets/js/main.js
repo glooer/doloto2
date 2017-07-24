@@ -43,22 +43,6 @@ $('.content-product__container .content-product-items').slick({
 
 
 $(document).ready(function() {
-	var warp = $('#js-animation-doloto')
-	for (var i = 0; i < 141; i++) {
-		warp.append('<img src="http://cdn.olof.ru/dump/doloto2/assets/images/fucking_animation_2/bandicam-2017-07-05-09-49-09-610' + addZero(i, 4) + '.png">')
-	}
-
-	var current = 1;
-	var warp__items = warp.find('img');
-	setInterval(function() {
-		warp__items[current].style.display = 'none';
-		current += 1;
-		if (current >= warp__items.length) {
-			current = 1;
-		}
-		warp__items[current].style.display = 'block';
-	}, 30)
-
 
 	/*
 	 * ***********************************************************************
@@ -91,4 +75,26 @@ $(document).ready(function() {
 			)
 		})
 	})()
+
+	///////
+
+
+	var warp = $('#js-animation-doloto')
+	for (var i = 0; i < 141; i++) {
+		warp.append('<img src="http://cdn.olof.ru/dump/doloto2/assets/images/fucking_animation_2/bandicam-2017-07-05-09-49-09-610' + addZero(i, 4) + '.png">')
+	}
+
+	var current = 1;
+	var warp__items = warp.find('img');
+	setInterval(function() {
+		warp__items[current].style.display = 'none';
+		current += 1;
+		if (current >= warp__items.length) {
+			current = 1;
+		}
+		warp__items[current].style.display = 'block';
+	}, 30)
+
+
+
 })
