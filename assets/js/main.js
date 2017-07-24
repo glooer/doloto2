@@ -44,12 +44,12 @@ $('.content-product__container .content-product-items').slick({
 
 $(document).ready(function() {
 	var warp = $('#js-animation-doloto')
-	for (var i = 0; i < 160; i++) {
-		warp.append('<img src="http://cdn.olof.ru/dump/doloto/assets/images/fucking_amination/animation' + addZero(i, 4) + '.png">')
+	for (var i = 0; i < 141; i++) {
+		warp.append('<img src="http://cdn.olof.ru/dump/doloto2/assets/images/fucking_animation_2/bandicam-2017-07-05-09-49-09-610' + addZero(i, 4) + '.png">')
 	}
 
 	var current = 1;
-	var warp__items = warp.find('img')
+	var warp__items = warp.find('img');
 	setInterval(function() {
 		warp__items[current].style.display = 'none';
 		current += 1;
@@ -58,4 +58,37 @@ $(document).ready(function() {
 		}
 		warp__items[current].style.display = 'block';
 	}, 30)
+
+
+	/*
+	 * ***********************************************************************
+	 *                           ПРАВКИ 21.07.2017 (Илья)
+	 * ***********************************************************************
+	 */
+
+	(function(){
+		function viewFeedbackText() {
+			var $self = $(this)
+			var $text = $self.parents('.feedback-item__text')
+			if ($text.hasClass('feedback-item__text_hidden')) {
+				$self.text("Свернуть")
+				$text.removeClass('feedback-item__text_hidden');
+			}
+			else {
+				$self.text("Развернуть")
+				$text.addClass('feedback-item__text_hidden');
+			}
+		}
+		$(".feedback-item__text").each(function(){
+			$(this).addClass("feedback-item__text_hidden");
+			$(this).append(
+				$("<a/>", {
+					"class": "feedback-item__view-btn",
+					"text": "Показать",
+					"click": viewFeedbackText,
+					"onclick": viewFeedbackText
+				})
+			)
+		})
+	})()
 })

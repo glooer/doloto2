@@ -8,6 +8,11 @@
   src: url(../fonts/MagistralBlackC.otf) format("opentype");
 }
 
+@font-face {
+  font-family: BOOKOS;
+  src: url(../fonts/BOOKOS.TTF);
+}
+
 
 
 body {
@@ -91,12 +96,25 @@ a.invisible-link:visited {
 }
 
 .jumbotron__title {
-	color: white;
-	font-size: 55px;
-	text-align: center;
-	padding: 1rem 0;
-	font-family: MagistralBlackC;
+	opacity: 0;
+	color: #1077ad;
+  font-size: 55px;
+  text-align: center;
+  padding: 1rem 0;
+	padding-top: 3rem;
+  font-family: BOOKOS;
+  font-weight: bold;
+  color: #1079af;
+	background: linear-gradient(green, red);  /* подробнее про градиенты */
+ -webkit-background-clip: text;  /* подробнее про background-clip */
+ color: transparent;
+  text-shadow: 0 -5px 1px #FFFFFF, 0 -5px 1px #FFFFFF, 0 5px 1px #FFFFFF, 0 5px 1px #FFFFFF, -5px 0 1px #FFFFFF, 5px 0 1px #FFFFFF, -5px 0 1px #FFFFFF, 5px 0 1px #FFFFFF, -1px -5px 1px #FFFFFF, 1px -5px 1px #FFFFFF, -1px 5px 1px #FFFFFF, 1px 5px 1px #FFFFFF, -5px -1px 1px #FFFFFF, 5px -1px 1px #FFFFFF, -5px 1px 1px #FFFFFF, 5px 1px 1px #FFFFFF, -2px -5px 1px #FFFFFF, 2px -5px 1px #FFFFFF, -2px 5px 1px #FFFFFF, 2px 5px 1px #FFFFFF, -5px -2px 1px #FFFFFF, 5px -2px 1px #FFFFFF, -5px 2px 1px #FFFFFF, 5px 2px 1px #FFFFFF, -3px -5px 1px #FFFFFF, 3px -5px 1px #FFFFFF, -3px 5px 1px #FFFFFF, 3px 5px 1px #FFFFFF, -5px -3px 1px #FFFFFF, 5px -3px 1px #FFFFFF, -5px 3px 1px #FFFFFF, 5px 3px 1px #FFFFFF, -4px -5px 1px #FFFFFF, 4px -5px 1px #FFFFFF, -4px 5px 1px #FFFFFF, 4px 5px 1px #FFFFFF, -5px -4px 1px #FFFFFF, 5px -4px 1px #FFFFFF, -5px 4px 1px #FFFFFF, 5px 4px 1px #FFFFFF, -5px -5px 1px #FFFFFF, 5px -5px 1px #FFFFFF, -5px 5px 1px #FFFFFF, 5px 5px 1px #FFFFFF, -5px -5px 1px #FFFFFF, 5px -5px 1px #FFFFFF, -5px 5px 1px #FFFFFF, 5px 5px 1px #FFFFFF;
 }
+
+.jumbotron__title {
+	position: relative;
+}
+
 
 .btn.btn-doloto {
 	width: 100%;
@@ -227,13 +245,24 @@ a.invisible-link:visited {
 
 .content-menu__item,
 .header-menu__item {
+  font-family: 'Arimo', sans-serif;
 	padding: 0.3rem 0.5rem;
 	/* background: #0098ca; */
+  background: linear-gradient(to top, #405da3, #029bda, #405da3);
 	color: white;
 	font-size: 1.5em;
 	font-weight: bold;
 	margin-bottom: 1rem;
-	border: 2px solid red;
+	-webkit-transition: background .2s linear, color .2s linear;
+	transition: background .2s linear, color .2s linear;
+	border-radius: 1rem;
+	cursor: pointer;
+	/*border: 2px solid red;*/
+}
+
+.header-menu__item.header:hover {
+	background: rgba(193,8,65,.8);
+
 }
 
 .header-menu__item-text {
@@ -242,12 +271,15 @@ a.invisible-link:visited {
 
 .content-menu__item-text,
 .header-menu__item-text {
-	background: #0098ca;
+	font-family: 'Arimo', sans-serif;
+  font-size: 1.4rem;
+	background: none;
 	padding: 1rem 0.5rem;
 	text-align: center;
 }
 
 .header-menu__item.header {
+	border-color: transparent;
   margin: 0 15px;
 	font-size: 19px;
 }
@@ -472,3 +504,34 @@ a.invisible-link:visited {
 /*.slick-slide:not(.slick-active) {
 	opacity: 0;
 }*/
+
+/*
+ * ***********************************************************************
+ *                           ПРАВКИ 21.07.2017 (Илья)
+ * ***********************************************************************
+ */
+
+.slick-slide:not(.slick-center) {
+	opacity: 1;
+}
+.feedback-item__text {
+	position: relative;
+    padding-bottom: 1.5em;
+}
+.feedback-item__text_hidden {
+	height: 9em;
+	overflow: hidden;
+}
+.feedback-item__view-btn {
+	position: absolute;
+	background: #eeeeee;
+    /*background: linear-gradient(to top, #eeeeee, rgba(0, 128, 0, 0));*/
+	display: block;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	text-align: center;
+	font-size: 0.8em;
+    color: #0098ca !important;
+	cursor: pointer;
+}
